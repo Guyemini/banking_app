@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,5 +33,21 @@ namespace banking_app
                 Console.WriteLine($"Withdrawal successful. New balance: {this.GetBalance()}");
             }
         }
+
+        public override void PrintBalance()
+        {
+            double balance = this.GetBalance();
+            Console.WriteLine($"Current balance: {balance}");
+
+            if (balance < 0)
+            {
+                Console.WriteLine($"Overdraft used: {Math.Abs(balance)} out of {OverdraftLimit}");
+            }
+            else
+            {
+                Console.WriteLine("No overdraft in use.");
+            }
+        }
+
     }
 }

@@ -6,66 +6,71 @@ using System.Threading.Tasks;
 
 namespace banking_app
 {
-    public class BankAccount
-    {
-        private int accountNumber;
-        private double balance;
-        private Customer customerOwner;
-
-        public BankAccount(int accountNumber, double balance, Customer customerOwner)
+    
+    
+        public class BankAccount
         {
-            this.accountNumber = accountNumber;
-            this.balance = balance;
-            this.customerOwner = customerOwner;
-        }
+            private int accountNumber;
+            private double balance;
+            private Customer customerOwner;
 
-        // Getters
-        public int GetAccountNumber()
-        {
-            return this.accountNumber;
-        }
+            public BankAccount(int accountNumber, double balance, Customer customerOwner)
+            {
+                this.accountNumber = accountNumber;
+                this.balance = balance;
+                this.customerOwner = customerOwner;
+            }
 
-        public double GetBalance()
-        {
-            return this.balance;
-        }
+            // Getters
+            public int GetAccountNumber()
+            {
+                return this.accountNumber;
+            }
 
-        public Customer GetCustomerOwner()
-        {
-            return this.customerOwner;
-        }
+            public double GetBalance()
+            {
+                return this.balance;
+            }
 
-        // Setters
-        public void SetAccountNumber(int accountNumber)
-        {
-            this.accountNumber = accountNumber;
-        }
+            public Customer GetCustomerOwner()
+            {
+                return this.customerOwner;
+            }
 
-        public void SetBalance(double balance)
-        {
-            this.balance = balance;
-        }
+            // Setters
+            public void SetAccountNumber(int accountNumber)
+            {
+                this.accountNumber = accountNumber;
+            }
 
-        public void SetCustomerOwner(Customer customerOwner)
-        {
-            this.customerOwner = customerOwner;
-        }
+            public void SetBalance(double balance)
+            {
+                this.balance = balance;
+            }
 
-        // Add money to the account
-        public void Deposit(double amount)
-        {
-            this.balance += amount;
-        }
+            public void SetCustomerOwner(Customer customerOwner)
+            {
+                this.customerOwner = customerOwner;
+            }
 
-        // Withdraw money from the account
-        public void Withdraw(double amount)
-        {
-            this.balance -= amount;
-        }
+            // Add money to the account
+            public void Deposit(double amount)
+            {
+                this.balance += amount;
+            }
 
-        public virtual void PrintBalance()
-        {
-            Console.WriteLine($"Hello {this.customerOwner.GetName()}, your balance is = {this.balance}");
+            // Withdraw money from the account
+            public void Withdraw(double amount)
+            {
+                this.balance -= amount;
+            }
+
+            public virtual void PrintBalance()
+            {
+                Console.WriteLine($"Hello {this.customerOwner.GetName()}, your balance is = {this.balance}");
+            }
         }
     }
-}
+
+   
+

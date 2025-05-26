@@ -47,6 +47,7 @@
     <Compile Include="BankBranch.cs" />
     <Compile Include="CheckingAccount.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="IBankBranch.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

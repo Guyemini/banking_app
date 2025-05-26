@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace banking_app
 {
-    public class BankBranch
+    public class BankBranch : IBankBranch
     {
         private int branchNumber;
         private string address;
@@ -38,7 +38,11 @@ namespace banking_app
         {
             for(int i = 0;i < accounts.Length;i++)
             {
-                Console.WriteLine($"{accounts[i].GetAccountNumber()}, {accounts[i].GetCustomerOwner()}, {accounts[i].GetBalance()}");
+                if (accounts[i] != null)
+                {
+                    Console.WriteLine($"{accounts[i].GetAccountNumber()}, {accounts[i].GetCustomerOwner()}, {accounts[i].GetBalance()}");
+
+                }
             }
         }
     }
