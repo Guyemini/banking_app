@@ -10,7 +10,7 @@ namespace banking_app
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("hello, world!");
         }
     }
 }
